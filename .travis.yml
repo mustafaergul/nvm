@@ -14,6 +14,7 @@ cache:
     - $TRAVIS_BUILD_DIR/.cache
     - $TRAVIS_BUILD_DIR/node_modules
 before_install:
+  - echo "Cache cleaned"
   - sudo sed -i 's/mozilla\/DST_Root_CA_X3.crt/!mozilla\/DST_Root_CA_X3.crt/g' /etc/ca-certificates.conf
   - sudo update-ca-certificates -f
     #- sudo apt-get install -y bzip2 openssl
